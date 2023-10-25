@@ -5,9 +5,12 @@ class TreeNode:
     def __init__ (self,LeftPointer,Data,RightPointer):
             self.LeftPointer = LeftPointer
             self.Data = Data
-            self.RgihtPointer = RightPointer    
+            self.RightPointer = RightPointer    
 
 #Check Functions
+def CheckTree():
+    for Index in range(0,len(Tree)):
+         print(Tree[Index].LeftPointer,Tree[Index].Data,Tree[Index].RightPointer)
 
 #Initialise Function
 def Initialise(Length):
@@ -28,3 +31,5 @@ def Initialise(Length):
 #Method Function
 
 #Main Thread
+Initialise(6)
+CheckTree()
