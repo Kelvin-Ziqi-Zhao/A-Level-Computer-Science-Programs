@@ -1,5 +1,7 @@
 #Author: Kelvin Zhao 
 
+#Data Source
+DataSource = ["F","C","S","B","E","R","D"]
 #Data Structure
 class TreeNode:
     def __init__ (self,LeftPointer,Data,RightPointer):
@@ -28,8 +30,21 @@ def Initialise(Length):
         Tree.append(TreeNode(i+1,"",Null))
     if Length > 0:
         Tree.append(TreeNode(Null,"",Null))
+
 #Method Function
+def InsertNode(DataInsert):
+    ThisNodePointer = RootPointer
+    while ThisNodePointer != Null:
+        PreviousNodePointer = ThisNodePointer
+        if Tree[ThisNodePointer].Data > DataInsert:
+            TurnLeft = True
+            ThisNodePointer = Tree[ThisNodePointer].LeftPointer
+        else:
+            TurnLeft = False
+            ThisNodePointer = Tree[ThisNodePointer].LeftPointer   
 
 #Main Thread
 Initialise(6)
+CheckTree()
+InsertNode("A")
 CheckTree()
