@@ -11,6 +11,7 @@ class TreeNode:
 
 #Check Functions
 def CheckTree():
+    print("Tree Information:")
     for Index in range(0,len(Tree)):
          print(Tree[Index].LeftPointer,Tree[Index].Data,Tree[Index].RightPointer)
 
@@ -33,6 +34,14 @@ def Initialise(Length):
 
 #Method Function
 def InsertNode(DataInsert):
+    global FreePointer
+    #Prepare Node
+    ThisNodePointer = FreePointer
+    Tree[FreePointer].Data = DataInsert
+    Tree[ThisNodePointer].LeftPointer = Null
+    Tree[ThisNodePointer].RgihtPointer = Null
+    FreePointer = Tree[ThisNodePointer].LeftPointer
+    #Insert
     ThisNodePointer = RootPointer
     while ThisNodePointer != Null:
         PreviousNodePointer = ThisNodePointer
