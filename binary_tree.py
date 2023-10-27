@@ -12,6 +12,8 @@ class TreeNode:
 #Check Functions
 def CheckTree():
     print("Tree Information:")
+    print("RootPointer:",RootPointer)
+    print("FreePointer:",FreePointer)
     for Index in range(0,len(Tree)):
          print(Tree[Index].LeftPointer,Tree[Index].Data,Tree[Index].RightPointer)
 
@@ -38,9 +40,8 @@ def InsertNode(DataInsert):
     #Prepare Node
     ThisNodePointer = FreePointer
     Tree[FreePointer].Data = DataInsert
-    Tree[ThisNodePointer].LeftPointer = Null
-    Tree[ThisNodePointer].RgihtPointer = Null
     FreePointer = Tree[ThisNodePointer].LeftPointer
+    
     #Insert
     ThisNodePointer = RootPointer
     while ThisNodePointer != Null:
@@ -51,9 +52,12 @@ def InsertNode(DataInsert):
         else:
             TurnLeft = False
             ThisNodePointer = Tree[ThisNodePointer].LeftPointer   
+    
+    4
 
 #Main Thread
 Initialise(6)
 CheckTree()
 InsertNode("A")
+InsertNode("B")
 CheckTree()
