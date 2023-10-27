@@ -7,7 +7,7 @@ def InitialiseStack(Size):
     StackTopPointer = Null
     StackMaxSize = Size
     for i in range(Size):
-        Stack.append(Null)
+        Stack.append("")
 
 def Push(NewItem):
     global StackMaxSize, StackTopPointer
@@ -22,7 +22,7 @@ def Pop():
     global StackTopPointer
     Item = Stack[StackTopPointer]
     if StackTopPointer > Null:
-        Stack[StackTopPointer] = Null
+        Stack[StackTopPointer] = ""
         StackTopPointer -= 1
         return(Item)
         
