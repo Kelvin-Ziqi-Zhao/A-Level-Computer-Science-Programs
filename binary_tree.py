@@ -33,6 +33,7 @@ def Initialise(Length):
         Tree.append(TreeNode(i+1,"",Null))
     if Length > 0:
         Tree.append(TreeNode(Null,"",Null))
+    print("Successfully Initialise")
 
 #Method Function
 def InsertNode(DataInsert):
