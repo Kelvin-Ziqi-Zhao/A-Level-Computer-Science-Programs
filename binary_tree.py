@@ -53,12 +53,12 @@ def InsertNode(DataInsert):
         else:
             TurnLeft = False
             ThisNodePointer = Tree[ThisNodePointer].LeftPointer   
-    
-    4
 
 #Main Thread
+"""
 Initialise(6)
 CheckTree()
 InsertNode("A")
 InsertNode("B")
 CheckTree()
+"""
