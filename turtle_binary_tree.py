@@ -7,16 +7,16 @@ def BinaryTreeDraw(Level,Length):
     else:
         fd(Length)  
         right(30)
-        BinaryTreeDraw(Level-1,Length/3)
+        BinaryTreeDraw(Level-1,Length/1.5)
         left(60)
-        BinaryTreeDraw(Level-1,Length/3)
+        BinaryTreeDraw(Level-1,Length/1.5)
         right(30)
         fd(-Length)  
 
 
         
 
-BinaryTreeDraw(2,100)
+BinaryTreeDraw(3,100)
 
 
 mainloop()
