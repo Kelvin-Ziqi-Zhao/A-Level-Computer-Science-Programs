@@ -9,5 +9,9 @@ class Moth():
         return self.__position
     
 gypsy = Moth(10)
-gypsy.moveToLight(20)
+gypsy.moveToLight(0)
+print(gypsy.getPosition())
+gypsy.moveToLight(10)
+print(gypsy.getPosition())
+gypsy.moveToLight(0)
 print(gypsy.getPosition())
