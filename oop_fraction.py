@@ -4,18 +4,23 @@ class Fraction:
         self.__denominator = denominator
     
     def gcd(self, x, y):
-        gcd(x, y) = gcd(y%x, x)
-        if x = 0:
+        if x == 0:
+            print(y)
             return y
+        return self.gcd(y%x, x)
     
     def reduce(self):
         if self.__numerator <= self.__denominator:
-            g = gcd(self.__numerator,self.__denominator)
+            g = self.gcd(self.__numerator,self.__denominator)
         else:
-            g = gcd(self.__denominator,self.__numerator)
+            g = self.gcd(self.__denominator,self.__numerator)
         
-        self.__numerator = self.__numerator / g
-        self.__denominator = self.__denominator / g
+        self.__numerator = self.__numerator/g
+        self.__denominator = self.__denominator/g
 
     def print(self):
+        print(self.__numerator,"/",self.__denominator)
 
+a = Fraction(30,50)
+a.reduce()
+a.print()
