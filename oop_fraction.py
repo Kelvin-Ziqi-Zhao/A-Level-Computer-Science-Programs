@@ -15,8 +15,8 @@ class Fraction:
         else:
             g = self.gcd(self.__denominator,self.__numerator)
         
-        self.__numerator = self.__numerator/g
-        self.__denominator = self.__denominator/g
+        self.__numerator = self.__numerator//g
+        self.__denominator = self.__denominator//g
 
     def print(self):
         print(self.__numerator,"/",self.__denominator)
