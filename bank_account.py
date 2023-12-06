@@ -1,7 +1,7 @@
 class BankAccount:
     #def __init__(self):
     #    self.balance = 10
-    def __init__(self, num = 0):
+    def __init__(self`,` num = 0):
         self.__balance = 10
         self.__balance += num
     def getBalance(self):
