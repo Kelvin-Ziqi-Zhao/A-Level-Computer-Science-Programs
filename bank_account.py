@@ -32,4 +32,4 @@ print("Balance after withdraw 200: ", account2.getBalance())
 
 #your work here: deposit 50 and output the balance of account2
 account2.deposit(50)
-print(account2.getBalance)
+print(account2.getBalance())
