@@ -6,16 +6,31 @@ def GenerateChangeInCoordinate(num):
         num += random.randint(-1,1)
     return num
 
-class Desert:
-    def
-
 class Animal:
     def __init__(self):
-        self.__aross = random.randint(0,39)
+        self.__across = random.randint(0,39)
         self.__down = random.randint(0,39)
         self.__score = 0
-    def EatFood(self):
+    def eatFood(self):
         __score += 1
         #GenerateFood
         self.__init__
-    def Move(self):
+    def move(self):
+        __across = GenerateChangeInCoordinate(__across)
+        __down = GenerateChangeInCoordinate(__down)
+
+desert1 = Desert()
+
+class Desert:
+    def __init__(self):
+        gride = [['*' for i in range(40)]for i in range(40)]
+        stepCounter = 0
+        animalList = []
+
+        numberOfAnimals = 
+    def incrementStepCounter(self):
+
+    def GenerateFood(self):
+
+    def DisplayGrid(self):
+
