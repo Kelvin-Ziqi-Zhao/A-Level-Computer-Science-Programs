@@ -5,7 +5,6 @@ class Fraction:
     
     def gcd(self, x, y):
         if x == 0:
-            print(y)
             return y
         return self.gcd(y%x, x)
     
@@ -18,9 +17,14 @@ class Fraction:
         self.__numerator = self.__numerator//g
         self.__denominator = self.__denominator//g
 
+    def plus(self, numerator, denominator):
+        self.__numerator = self.__numerator * denominator + self.__denominator * numerator
+        self.__denominator = self.__denominator * denominator
+        self.reduce()
+
     def print(self):
         print(self.__numerator,"/",self.__denominator)
 
-a = Fraction(30,50)
-a.reduce()
+a = Fraction(1,4)
+a.plus(2,4)
 a.print()
