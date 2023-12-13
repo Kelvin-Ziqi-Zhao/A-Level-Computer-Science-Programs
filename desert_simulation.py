@@ -6,6 +6,9 @@ def GenerateChangeInCoordinate(num):
         num += random.randint(-1,1)
     return num
 
+class Desert:
+    def
+
 class Animal:
     def __init__(self):
         self.__aross = random.randint(0,39)
