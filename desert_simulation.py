@@ -18,9 +18,7 @@ class Animal:
     def move(self):
         __across = GenerateChangeInCoordinate(__across)
         __down = GenerateChangeInCoordinate(__down)
-
-desert1 = Desert()
-
+        
 class Desert:
     def __init__(self):
         gride = [['*' for i in range(40)]for i in range(40)]
