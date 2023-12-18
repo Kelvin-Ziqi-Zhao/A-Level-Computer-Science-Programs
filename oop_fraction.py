@@ -25,6 +25,9 @@ class Fraction:
     def print(self):
         print(self.__numerator,"/",self.__denominator)
 
+class MixedFraction(Fraction):
+    
+
 a = Fraction(1,4)
 a.plus(2,4)
 a.print()
