@@ -17,11 +17,15 @@ class Vehicle:
         return self.__mileage
     
 #TODO: Inherit from Vehicle
-class Car...
-    #TODO: Complete constructor
-    ...
+class Car(Vehicle):
+    def __init__(self, aValue):
+        super().__init__(aValue)
     
-    #TODO: Override the getValue method
+    def getValue(self):
+        output = Vehicle.getValue(self) - Vehicle.getMileage(self)*0.25
+        if output <0:
+            return 0
+        return output 
     ...
     
 myCar = Car(20000)
