@@ -4,28 +4,24 @@ The getDescription method should yield a string such as
 
 #A coin with a monetary value.
 class Coin:
-  #Constructs a coin.
-  #@param aValue the monetary value of the coin.
-  #@param aName the name of the coin
-  ...
-        
-  #Gets the coin value.
-  #@return the value
-  ...
-        
-  #Gets the coin description.
-  #return a description of this coin
-  ...
+    def __init__(self, name, monetary): #Constructs a coin.
+        self.__name = name #@param aName the name of the coin
+        self.__monetary = monetary #@param aValue the monetary value of the coin.
+
+    def getCoinValue(self): #Gets the coin value.
+       return __monetary #@return the value
+    
+    def getDescription(self): #Gets the coin description.
+       return __name + "," + "value=" + __monetary #return a description of this coin
     
 #A quarter with a state theme.
 class Quarter(Coin):
-  #Constructs a quarter.
-  #@param aValue the monetary value of the quarter.
-  #@param aName the name of the quarter
-  ...
-        
-  def getDescription(self):
-    ...
+    def __init__(self, name, monetary, state):#Constructs a quarter.
+        super().__init__(monetary, name)
+        __state = state
+
+    def getDescription(self):
+        return __name + "," + "value=" + __monetary + "state=" + __state
 
 c = Quarter("Michigan")
 print(c.getDescription())
