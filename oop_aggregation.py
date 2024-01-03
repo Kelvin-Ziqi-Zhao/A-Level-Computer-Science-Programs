@@ -18,13 +18,14 @@ class Propulsion:
     
 class Vehicle:
     #TODO: using the Propulsion class. 
-    def __init__(self, make, model, year):
+    def __init__(self, make, model, year, propulsion):
         self.__make = make
         self.__model = model
-        self.__year = year
+        self.__year = year 
+        self.__propulsion = propulsion #data type: class propulsion
    
     def formatForPrinting(self):
-        result = "Make: " + self.__make + "; Model: " + self.__model + "; Year: " + self.__year 
+        result = "Make: " + self.__make + "; Model: " + self.__model + "; Year: " + self.__year + self.__propulsion.format()
         #TODO
         ...
         return result
