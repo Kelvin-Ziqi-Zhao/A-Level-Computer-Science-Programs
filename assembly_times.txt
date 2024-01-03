@@ -1,0 +1,24 @@
+https://www.101computing.net/LMC/#
+
+INP
+STA num      
+INP 
+SUB one    
+STA count
+loop    LDA sum
+	ADD num
+	STA sum
+	
+	LDA count
+	SUB one
+	STA count
+	BRP loop
+
+	LDA sum
+	OUT
+        HLT
+		
+one     DAT 1
+num  DAT
+count  DAT 
+sum DAT

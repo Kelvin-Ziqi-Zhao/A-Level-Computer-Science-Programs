@@ -1,0 +1,21 @@
+https://www.101computing.net/LMC/#
+
+INP
+STA remain      
+INP    
+STA num2
+loop    LDA remain
+	SUB num2
+	STA remain
+	
+	BRP loop
+
+	LDA remain
+	ADD num2
+	OUT
+        HLT
+		
+one     DAT 1
+num1  DAT
+num2  DAT 
+remain DAT
